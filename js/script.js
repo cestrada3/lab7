@@ -1,16 +1,13 @@
 function init() {
     //add your javascript between these two lines of code
     function alertFunction() {
-      alert('Christian Estradda: ' + inputForm.value);
+      var input = document.getElementById('entryinput').value;
+      var output = document.getElementById('textoutput');
+      alert("Christian Estrada " + input.value);
+      output.innerHTML = input;
     }
+    var button = document.getElementById('entrybutton');
+    button.addEventListener('click', alertFunction);
   
-    function setText() {
-      var outputText = document.getElementById('textoutput');
-      outputText.innerHTML = "<h2>" + inputForm.value + "</h2>";
-    }
-    var alertDiv = document.getElementById('entrybutton');
-    var inputForm = document.getElementById('entryinput');
-    alertDiv.addEventListener('click', alertFunction);
-    alertDiv.addEventListener("click", setText);
   }
-  window.addEventListener('load', init);
+  window.addEventListener('load', init)
